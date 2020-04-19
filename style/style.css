@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	background: #f7f5e9;
+	margin: 0;
+}
+
+/* ================================================ */
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+h1 {
+	font-family: 'Gotu', sans-serif;
+	font-size: 4em;
+	text-align: center;
+	margin: 0;
+	padding: .5em;
+}
+
+h2 {
+	font-family: 'Gotu', sans-serif;
+	margin: 0;
+	padding: .5em 0;
+}
+
+aside {
+	font-size: .85em;
+}
+
+.aside-heading {
+	font-family: 'Gotu', sans-serif;
+	font-size: 1.1em;
+	text-decoration: underline;
+}
+
+a {
+	text-decoration: none;
+	font-weight: 400;
+	color: #4f551e;
+}
+
+a:hover {
+	color: #BFD105;
+}
+
+aside img {
+	height: 190px;
+	text-align: center;
+	margin: auto;
+	padding: .7em 0 0;
+}
+
+
+.search-bar {
+	padding: 1em 0;
+}
+
+input[type=text] {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.2em;
+	font-weight: 300;
+}
+
+figure {
+	float: right;
+	width: 50%;
+}
+
+.post-info {
+	color: #7d8437;
+	font-size: .75em;
+	margin: .3em 0 1em;
+}
+
+	
+.header {
+	grid-area: header;
+	background-image: url("header-back.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #f7f5e9;
+}
+
+nav {
+	grid-area: nav;
+}
+
+main {
+	grid-area: main;
+	padding: 1em 1.5em 1em 3em;
+	max-width: 750px;
+
+}
+
+aside {
+	grid-area: aside;
+	padding: 1em 1.5em;
+}
+
+footer {
+	grid-area: footer;
+	background: #4f551e;
+	color: #f7f5e9;
+	text-align: center;
+	text-weight: 400;
+}
+
+footer p {
+	padding: 1em;
+	margin: 0;
+}
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1000px;
+	background: #f7f5e9;
+}
+	
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 15em;
+	grid-template-areas:"header header"
+						"nav	nav"
+						"main	aside"
+						"footer footer";
+	grid-template-rows: auto auto 1fr auto;
+}
+
+nav ul {
+	display: flex;
+	justify-content: center;
+	flex: 1 0 auto;
+	flex-flow: row wrap;
+	margin: 0;
+	background: #4f551e;
+	padding: .75em 0;
+}
+
+nav li a {
+	padding: .5em 1em;
+	color: #f7f5e9;
+}
